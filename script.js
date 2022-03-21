@@ -1,18 +1,37 @@
-
-/*function for getting a random number between 1-3*/
-
-//function getRandom(min,max) {
-//    return Math.floor((Math.random()*(max - min))+min)
-//}
 /*function for the computer's choice of play*/
-
 function computerPlay() {
     const result = Math.floor((Math.random()*(4 - 1))+1);
     if (result == 1) {return "rock";}
     else if (result == 2) {return "paper";}
     else if (result == 3) {return "scissors";}
-    else {return "Something Went Wrong"}
+    else {return "Something Went Wrong";}
 }
 
+/*function for the player's choice of play*/
+function playersPlay(choice) {
+    const outcome = choice.toLowerCase();
+    return outcome;
+}
 
+/*function to play a round of Rock Paper Scissors*/
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection == computerSelection) {console.log("It was a draw");}
+    else if(playerSelection == "rock" && computerSelection == "scissors"){console.log("You beat the computers rock!");}
+    else if(playerSelection == "paper" && computerSelection == "rock"){console.log("You beat the computer's rock!");}
+    else if(playerSelection == "scissors" && computerSelection == "paper"){console.log("You beat the computer's paper!");}
+    else if(computerSelection == "rock" && playerSelection == "scissors"){console.log("You Lose! Rock beats scissors.");}
+    else if(computerSelection == "paper" && playerSelection == "rock"){console.log("You Lose! Paper beats rock.");}
+    else if(computerSelection == "scissors" && playerSelection == "paper"){console.log("You Lose! Scissors beats paper.");}
+}
 
+/*function to play five rounds in a row*/
+function game(){
+    for (let i = 0; i < 5; i++){
+        const computerSelection = computerPlay();
+        const playerSelection = playersPlay("ROCK");
+        var round = playRound(playerSelection, computerSelection);
+        console.log(round);
+    }
+}
+
+game();
