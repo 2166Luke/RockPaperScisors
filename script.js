@@ -8,8 +8,10 @@ function computerPlay() {
 }
 
 /*function for the player's choice of play*/
-function playersPlay(choice) {
-    const outcome = choice.toLowerCase();
+let playerInput = prompt("Choose your play.");
+
+function playersPlay(playerInput) {
+    const outcome = playerInput.toLowerCase();
     return outcome;
 }
 
@@ -28,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
 function game(){
     for (let i = 0; i < 5; i++){
         const computerSelection = computerPlay();
-        const playerSelection = playersPlay("ROCK");
+        const playerSelection = playersPlay(playerInput);
         var round = playRound(playerSelection, computerSelection);
         console.log(round);
     }
