@@ -8,22 +8,35 @@
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-
-    <div class="header">
-        <h1 class="titleTxt">"MAN VS MACHINE"</h1>
-        <h2 class="subheader">Who will win?</h2>
-    </div>
-    <div class="game">
-        <div>Choose your weapon...</div>
-        <button class="btn rock">Rock</button>
-        <button class="btn paper">Paper</button>
-        <button class="btn scissors">Scissors</button>
-    </div>
-    <div class="scorebox">
-        <div class="pcScore"></div>
-        <div class="playerScore"></div>
-    </div>
-    <div class="results"></div>
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div class="container">
+        <div class="header">
+            <h1 class="titleTxt">"MAN VS MACHINE"</h1>
+            <h2 class="subheader">Who will win?</h2>
+        </div>
+        <div class="game">
+            <div class="flavorText">Choose your weapon...</div>
+            <div class="buttons">
+            <button class="btn rock">Rock</button>
+            <button class="btn paper">Paper</button>
+            <button class="btn scissors">Scissors</button>
+            </div>
+        </div>
+        <div class="scorebox">
+            <div class="pcScore"></div>
+            <div class="playerScore"></div>
+        </div>
+        <div class="results"></div>
+        
+        <div class="footer">
+            <p class="footerText">Created by Luke Hancock</p>
+        </div>
+        </div>
+    <div class="overlay"></div>
+    <div id = "endScreen"></div>    
     <script src="script.js"></script>
 </body>
 </html>
